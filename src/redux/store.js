@@ -1,5 +1,6 @@
 import { createStore } from "redux";
 import { devToolsEnhancer } from "@redux-devtools/extension";
+import { configureStore } from "@reduxjs/toolkit";
 
 // export const deposit = {
 // накладна
@@ -36,4 +37,8 @@ const rootReducer = (state = initialState, action) => {
   }
 };
 
-export const store = createStore(rootReducer, devToolsEnhancer());
+// export const store = createStore(rootReducer, devToolsEnhancer());
+
+export const store = configureStore({
+  reducer,
+});
